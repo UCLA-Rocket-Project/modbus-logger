@@ -1,0 +1,9 @@
+{
+	"labels": ["TC", "PT", "LC"],
+	"regLabels": [1, 1, 1],
+	"startRegister": 1001,
+	"device": "COM8",
+	"file": "hello.csv",
+	"updateTime": 20,
+	"printTime": 100
+}

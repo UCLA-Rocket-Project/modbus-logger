@@ -1,0 +1,15 @@
+{
+  "name": "modbus-logger",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/UCLA-Rocket-Project/modbus-logger.git",
+  "author": "saltyJeff <saltyJeff@users.noreply.github.com>",
+  "license": "MIT",
+  "dependencies": {
+    "jsmodbus": "^4.0.0",
+    "serialport": "^8.0.6"
+  },
+  "bin": {
+    "modbus-logger": "./index.js"
+  }
+}

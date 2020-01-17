@@ -1,5 +1,8 @@
 #!/usr/bin/env node
-
+const handleArgs = require('./handleArgs')
+if(handleArgs()) {
+	process.exit(0)
+}
 const config = require('./config')
 const Modbus = require('jsmodbus')
 const SerialPort = require('serialport')

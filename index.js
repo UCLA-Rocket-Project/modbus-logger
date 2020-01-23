@@ -32,7 +32,7 @@ socket.on('open', async () => {
 		const start = Date.now()
 		let regs = []
 		try {
-			regs = await client.readInputRegisters(1001, 3)
+			regs = await client.readInputRegisters(config.startRegister, 3)
 		}
 		catch (e) {
 			console.error(e)

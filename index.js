@@ -50,7 +50,10 @@ socket.on('open', async () => {
 				if(labelIdx == 0) {
 					continue
 				}
+				const signed = labelIdx < 0
 				labelIdx--
+				labelIdx = Math.abs(labelIdx)
+				const val = signed ? Math.pow(2, 16) - values[i] : values[i]
 				cache[config.labels[labelIdx]][indicies[labelIdx]] = values[i]
 				indicies[labelIdx]++
 			}
@@ -74,6 +77,7 @@ function createHeader() {
 			header += '0,'
 		}
 		else {
+			lblIdx = Math.abs(lblIdx)
 			header += `${config.labels[lblIdx - 1]},` 
 		}
 	}
@@ -92,6 +96,7 @@ function createCache() {
 			continue
 		}
 		labelIdx--
+		labelIdx = Math.abs(labelIdx)
 		cache[config.labels[labelIdx]].push(0)
 	}
 	return cache

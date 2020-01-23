@@ -53,8 +53,9 @@ socket.on('open', async () => {
 				const signed = labelIdx < 0
 				labelIdx--
 				labelIdx = Math.abs(labelIdx)
-				const val = signed ? Math.pow(2, 16) - values[i] : values[i]
-				cache[config.labels[labelIdx]][indicies[labelIdx]] = values[i]
+				//values[i] = 65531
+				const val = signed ? values[i] - Math.pow(2, 16): values[i]
+				cache[config.labels[labelIdx]][indicies[labelIdx]] = val
 				indicies[labelIdx]++
 			}
 			console.log(JSON.stringify(cache))

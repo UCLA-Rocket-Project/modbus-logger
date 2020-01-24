@@ -73,7 +73,7 @@ socket.on('open', async () => {
 function createHeader() {
 	let header = ''
 	for(let i = 0; i < config.regLabels.length; i++) {
-		const lblIdx = config.regLabels[i]
+		let lblIdx = config.regLabels[i]
 		if(lblIdx == 0) {
 			header += '0,'
 		}
